@@ -50,7 +50,7 @@ export default function CasesContent({ tg, profile, cases }) {
         isOpen={isModalOpen.isOpen}
         onOk={handleOk}
         onClose={handleCancel}
-        item={cases || ''}
+        item={''}
       />
     </Layout.Content>
   );

@@ -74,7 +74,7 @@ export default function ProfileContent({ tg, profile }) {
             <span className="text-grey">Balance</span>
             <div style={{ flexDirection: 'row' }} className="flex-center-style">
               <span className="text-white-middle">
-                {profile.balance || '0.00'}
+                {profile?.balance || '0.00'}
               </span>
               <Space wrap size={16}>
                 <Avatar size="small" shape="circle" gap="5" src={logo} />
@@ -121,7 +121,7 @@ export default function ProfileContent({ tg, profile }) {
         isOpen={isModalOpen.isOpen}
         onOk={handleOk}
         onClose={handleCancel}
-        item={profile || ''}
+        item={''}
       />
     </Layout.Content>
   );
