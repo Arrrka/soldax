@@ -10,8 +10,10 @@ export default function FullWidthTonButton() {
     }
   };
 
-  const handleDisconnectClick = async (e) => {
-    await disconnect();
+  const handleDisconnectClick = () => {
+    if (isConnected) {
+      disconnect();
+    }
   };
 
   if (!isConnected) {
@@ -28,21 +30,25 @@ export default function FullWidthTonButton() {
     );
   }
 
-  return (
-    <div className="ton-disconected-custom-block flex-space-between-style">
-      <div className="flex-center-style flex-column-content-style">
-        <div className="text-grey">User address:</div>
-        <div className="text-white-middle">{shortenAddress(walletAddress)}</div>
+  if (isConnected) {
+    return (
+      <div className="ton-disconected-custom-block flex-space-between-style">
+        <div className="flex-center-style flex-column-content-style">
+          <div className="text-grey">User address:</div>
+          <div className="text-white-middle">
+            {shortenAddress(walletAddress)}
+          </div>
+        </div>
+        <button
+          className="flex-center-style ton-connect-custom-button"
+          style={{ width: 120, height: 40, marginLeft: 'auto' }}
+          onClick={handleDisconnectClick}
+        >
+          Disconnect
+        </button>
       </div>
-      <button
-        className="flex-center-style ton-connect-custom-button"
-        style={{ width: 120, height: 40, marginLeft: 'auto' }}
-        onClick={handleDisconnectClick}
-      >
-        Disconnect
-      </button>
-    </div>
-  );
+    );
+  }
 }
 
 // Функция для сокращения адреса
