@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Arrrka.github.io/ton-mini-app",
+  "homepage": "https://arrrka.github.io/ton-mini-app",
   "scripts": {
     "dev": "vite",
     "dev-https": "vite --open",
