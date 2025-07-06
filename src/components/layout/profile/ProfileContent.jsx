@@ -47,14 +47,14 @@ export default function ProfileContent({ tg, profile }) {
         className="body-content-style"
       >
         <Space wrap size={16} className="big-user-photo-style">
-          <Avatar size={110} shape="circle" src={tg.photo_url} />
+          <Avatar size={110} shape="circle" src={tg?.photo_url} />
         </Space>
         <div className="flex-space-between-style">
           <span
             className="flex-center-style text-white-large"
             style={{ textAlign: 'left' }}
           >
-            {tg.first_name + ' ' + tg.last_name}
+            {tg?.first_name + ' ' + tg?.last_name}
           </span>
           <span
             style={{
@@ -62,7 +62,7 @@ export default function ProfileContent({ tg, profile }) {
             }}
             className="flex-space-between-style black-card-style flex-center-style"
           >
-            #{tg.id}
+            #{tg?.id}
           </span>
         </div>
 

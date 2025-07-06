@@ -41,9 +41,9 @@ export default function CasesHeader({ tg, profile }) {
       <LinkItem value="/soldax/profile">
         <div style={header}>
           <Space wrap size={16}>
-            <Avatar size="large" shape="circle" gap="5" src={tg.photo_url} />
+            <Avatar size="large" shape="circle" gap="5" src={tg?.photo_url} />
           </Space>
-          <span style={headerText}>{tg.first_name}</span>
+          <span style={headerText}>{tg?.first_name}</span>
         </div>
       </LinkItem>
 

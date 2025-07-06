@@ -3,7 +3,7 @@ import { useTonConnect } from '../hooks/useTonConnect';
 
 export const useTelegramTON = () => {
   const { connect, connected } = useTonConnect();
-  const tg = window.Telegram.WebApp;
+  const tg = window.Telegram?.WebApp;
 
   useEffect(() => {
     if (tg.initDataUnsafe?.start_param) {
