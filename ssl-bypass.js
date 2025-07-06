@@ -1,0 +1,3 @@
+window.customHttpsAgent = {
+  rejectUnauthorized: false
+};
