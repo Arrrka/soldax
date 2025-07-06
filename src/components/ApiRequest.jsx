@@ -48,7 +48,7 @@ const ApiRequest = () => {
     const getCasesData = async () => {
       try {
         const response = await api.post('/Cases/open', {
-          caseId: 'dd0dc658-024e-4028-9a3c-4ac1de6ae814',
+          caseId: '',
         });
         setData(response.data);
       } catch (err) {
