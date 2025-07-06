@@ -10,9 +10,10 @@ export default function FullWidthTonButton() {
     }
   };
 
-  const handleDisconnectClick = (e) => {
-    // e.stopPropagation();
-    disconnect();
+  const handleDisconnectClick = async (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    await disconnect();
   };
 
   if (!isConnected) {
