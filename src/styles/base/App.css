@@ -275,12 +275,14 @@
   box-sizing: border-box;
 }
 
-.ton-connect-custom-button:hover {
+.ton-connect-custom-button:hover,
+.ton-disconected-custom-button:hover {
   opacity: 0.9;
   transform: translateY(-1px);
 }
 
-.ton-connect-custom-button:active {
+.ton-connect-custom-button:active,
+.ton-disconected-custom-button:active {
   transform: translateY(0);
 }
 
@@ -288,6 +290,48 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.ton-disconected-custom-block {
+  width: 100%;
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #1f1f20, #0066cc54);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px #0000001a;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.ton-disconected-custom-button {
+  width: 100%;
+  padding: 12px 24px;
+  background: #1f1f20;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px #0000001a;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 /* -------------------------------- */
