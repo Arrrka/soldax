@@ -3,12 +3,7 @@ import { useTonConnectUI } from '@tonconnect/ui-react';
 import { useState } from 'react';
 import DepModal from '../../common/dep-modal/DepModal';
 import logo from '@/assets/images/ton_logo_pack/ton_logo_pack/ton_symbol.svg';
-
-// Функция для сокращения адреса
-function shortenAddress(address) {
-  if (!address) return '';
-  return `${address.slice(0, 4)}...${address.slice(-4)}`;
-}
+import FullWidthTonButton from '../../common/FullWidthTonButton';
 
 export default function ProfileContent({ tg, profile }) {
   const [isModalOpen, setIsModalOpen] = useState({
