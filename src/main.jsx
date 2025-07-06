@@ -6,7 +6,7 @@ import App from './App.jsx';
 import { TonConnectUIProvider } from '@tonconnect/ui-react';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <TonConnectUIProvider manifestUrl="https://127.0.0.1:5173/soldax/tonconnect-manifest.json">
+  <TonConnectUIProvider manifestUrl="https://arrrka.github.io/soldax/tonconnect-manifest.json">
     <React.StrictMode>
       <BrowserRouter>
         <App />
