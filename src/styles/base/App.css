@@ -1,0 +1,385 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  color: #ffffff;
+}
+
+.ton-icon {
+  background-image: url('@/assets/images/ton_logo_pack/ton_logo_pack/ton_symbol.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.text-white-middle {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.text-white-large {
+  font-size: 24px;
+  height: 40px;
+}
+
+.text-grey {
+  font-size: 14px;
+  color: #8e8e8e;
+}
+
+.body-content-style {
+  min-height: calc(100vh - 60px);
+  color: #fff;
+  background-color: #141415;
+  width: 100%;
+}
+
+.flex-space-between-style {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.flex-space-between-modal-style {
+  height: 90%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 15px;
+  font-weight: bold;
+}
+
+@media (max-width: 450px) {
+  .flex-space-between-modal-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.flex-center-style {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.flex-column-content-style {
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  align-items: flex-start;
+}
+
+.case-map-style {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  max-width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  background-color: transparent;
+  margin-left: 5px;
+  justify-content: center;
+}
+
+.case-card-style {
+  width: 160px;
+  height: 180px;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: transparent;
+  border-radius: 15;
+}
+
+.case-card-price-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 8px 0;
+  font-weight: bold;
+  margin-top: auto;
+}
+
+.black-card-style {
+  width: 100%;
+  max-width: 600px;
+  background: #1f1f20;
+  border-color: transparent;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.black-card-mini-style {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: linear-gradient(-200deg, #1f1f20, 70%, #424243);
+  border-color: #141415;
+  border-radius: 10px;
+}
+
+.blue-card-mini-second-style {
+  display: flex;
+  width: 65%;
+  color: white;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 0;
+  background: linear-gradient(-200deg, #1f1f20, 70%, #424243);
+  border-color: #141415;
+  border-radius: 10px;
+}
+
+.blue-card-style-fixed {
+  width: 100%;
+  max-width: 510px;
+  background: linear-gradient(90deg, #0088cc, #0066cc);
+  border-color: transparent;
+  border-radius: 30px;
+  margin-bottom: 5px;
+  position: fixed;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  padding-bottom: env(safe-area-inset-bottom, 12px);
+}
+
+.blue-card-mini-style {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: linear-gradient(-200deg, #024e9a, 70%, #02abff);
+  border-color: #141415;
+  border-radius: 10px;
+}
+
+.blue-card-style-modal {
+  width: 100%;
+  background: linear-gradient(90deg, #0084ffbd, #0486ff);
+  border-color: transparent;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  padding-bottom: env(safe-area-inset-bottom, 12px);
+}
+
+.blue-card-mini-modal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: linear-gradient(-200deg, #024e9a7d, 70%, #02abff5e);
+  border-color: #141415;
+  border-radius: 30px;
+}
+
+.green-card-style-modal {
+  width: 100%;
+  background: linear-gradient(90deg, #02a505, #00cc03);
+  border-color: transparent;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  padding-bottom: env(safe-area-inset-bottom, 12px);
+}
+
+.green-card-mini-modal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: linear-gradient(-200deg, #0f9d00, 70%, #02e206);
+  border-color: #141415;
+  border-radius: 30px;
+}
+
+.blue-card-dep-style-modal {
+  width: 100%;
+  max-width: 10rem;
+  height: 10rem;
+  background: linear-gradient(90deg, #0084ffbd, #0486ff);
+  border-color: transparent;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  padding-bottom: env(safe-area-inset-bottom, 12px);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.green-card-dep-style-modal {
+  width: 100%;
+  max-width: 10rem;
+  height: 10rem;
+  background: linear-gradient(90deg, #02a505, #00cc03);
+  border-color: transparent;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  padding-bottom: env(safe-area-inset-bottom, 12px);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.big-user-photo-style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.segmented-black-modal {
+  width: 100%;
+  height: 40px;
+  background: #1f1f20;
+  color: white;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.ton-connect-custom-button {
+  width: 100%;
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #0088cc, #0066cc);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.ton-connect-custom-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.ton-connect-custom-button:active {
+  transform: translateY(0);
+}
+
+.ton-connect-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -------------------------------- */
+
+/* Бэкдроп (фон) */
+.ton-modal__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Основной контейнер */
+.ton-modal__container {
+  width: calc(100vh);
+  height: calc(100vh);
+  padding: 0 10px;
+}
+
+/* Окно модалки */
+.ton-modal__window {
+  background: #121214;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border: 1px solid #2a2a2e;
+  width: 100%;
+  max-width: 450px;
+  padding: 0;
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  align-items: center;
+  overflow-y: auto; /* Включаем вертикальную прокрутку */
+  flex-grow: 1; /* Занимаем все доступное пространство */
+  max-height: calc(90vh - 100px); /* Вычитаем высоту заголовка и отступы */
+  padding: 16px;
+}
+
+@media (max-width: 440px) {
+  .ton-modal__window {
+    width: 100%;
+    top: 15%;
+    bottom: 0;
+    z-index: 1000;
+    max-height: calc(100vh);
+  }
+}
+
+/* Шапка модалки */
+.ton-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Заголовок */
+.ton-modal__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Кнопка закрытия */
+.ton-modal__close-btn {
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  color: #a2a2a8;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ton-modal__close-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+/* Контентная область */
+.ton-modal__content {
+  padding: 20px;
+}

@@ -1,0 +1,44 @@
+{
+  "name": "mini-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://Arrrka.github.io/ton-mini-app",
+  "scripts": {
+    "dev": "vite",
+    "dev-https": "vite --open",
+    "generate-certs": "mkdir certs 2>nul || true && openssl req -x509 -newkey rsa:4096 -keyout certs/localhost-key.pem -out certs/localhost.pem -days 365 -nodes -subj \"/CN=localhost\"",
+    "dev-insecure": "set NODE_TLS_REJECT_UNAUTHORIZED=0&&vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.6.1",
+    "@tonconnect/sdk": "^3.2.0",
+    "@tonconnect/ui-react": "^2.2.0",
+    "@twa-dev/sdk": "^8.0.2",
+    "antd": "^5.26.2",
+    "axios": "^1.10.0",
+    "prop-types": "^15.8.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "prettier": "^3.6.2",
+    "sass": "^1.89.2",
+    "vite": "^6.3.5",
+    "vite-plugin-svgr": "^4.3.0"
+  }
+}
