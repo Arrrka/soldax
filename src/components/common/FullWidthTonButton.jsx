@@ -11,7 +11,7 @@ export default function FullWidthTonButton() {
   };
 
   const handleDisconnectClick = (e) => {
-    e.stopPropagation();
+    // e.stopPropagation();
     disconnect();
   };
 
