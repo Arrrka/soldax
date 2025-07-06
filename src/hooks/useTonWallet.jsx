@@ -19,11 +19,27 @@ export function useTonWallet() {
     }
   }, [tonConnectUI.wallet]);
 
+  const connect = () => {
+    if (tonConnectUI?.modal) {
+      tonConnectUI.openModal();
+    } else {
+      console.warn('TonConnect UI не готов для открытия модалки');
+    }
+  };
+
+  const disconnect = () => {
+    if (tonConnectUI) {
+      tonConnectUI.disconnect();
+    } else {
+      console.warn('TonConnect UI не готов для дисконнекта');
+    }
+  };
+
   return {
     isConnected,
     walletAddress,
     wallet,
-    connect: tonConnectUI.openModal,
-    disconnect: tonConnectUI.disconnect,
+    connect,
+    disconnect,
   };
 }

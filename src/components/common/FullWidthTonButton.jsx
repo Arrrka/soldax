@@ -37,7 +37,7 @@ export default function FullWidthTonButton() {
       </div>
       <button
         className="flex-center-style ton-connect-custom-button"
-        style={{ width: 120, height: 40 }}
+        style={{ width: 120, height: 40, marginLeft: 'auto' }}
         onClick={handleDisconnectClick}
       >
         Disconnect
