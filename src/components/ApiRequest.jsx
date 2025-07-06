@@ -8,7 +8,7 @@ const api = axios.create({
   baseURL: '/api',
   headers: {
     'Content-Type': 'application/json',
-    Authorization: 'TMiniApp ' + tg.initData,
+    Authorization: 'TMiniApp ' + tg?.initData,
   },
 });
 
@@ -29,7 +29,7 @@ const ApiRequest = () => {
     const syncData = async () => {
       try {
         // Получаем initData из Telegram WebApp
-        const initData = tg.initData || '';
+        const initData = tg?.initData || '';
 
         console.log('Telegram initData:', initData);
 

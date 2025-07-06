@@ -20,7 +20,7 @@ const ApiSync = () => {
     const SyncData = async () => {
       try {
         // Получаем initData из Telegram WebApp
-        const initData = tg.initData || '';
+        const initData = tg?.initData || '';
 
         const response = await api.post('/profile/sync');
 

@@ -6,7 +6,7 @@ export const useTelegramTON = () => {
   const tg = window.Telegram?.WebApp;
 
   useEffect(() => {
-    if (tg.initDataUnsafe?.start_param) {
+    if (tg?.initDataUnsafe?.start_param) {
       // Обработка deep link с реферальным кодом
       console.log('Start param:', tg.initDataUnsafe.start_param);
     }
