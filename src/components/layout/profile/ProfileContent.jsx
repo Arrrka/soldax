@@ -3,7 +3,7 @@ import { useTonConnectUI } from '@tonconnect/ui-react';
 import { useState } from 'react';
 import DepModal from '../../common/dep-modal/DepModal';
 import logo from '@/assets/images/ton_logo_pack/ton_logo_pack/ton_symbol.svg';
-import FullWidthTonButton from '../../common/FullWidthTonButton';
+// import FullWidthTonButton from '../../common/FullWidthTonButton';
 
 export default function ProfileContent({ tg, profile }) {
   const [isModalOpen, setIsModalOpen] = useState({
@@ -77,7 +77,7 @@ export default function ProfileContent({ tg, profile }) {
             </button>
           </div>
         </div>
-        <FullWidthTonButton />
+        {/* <FullWidthTonButton /> */}
         <div className="flex-space-between-style">
           <span>Inventory:</span>
           <button
