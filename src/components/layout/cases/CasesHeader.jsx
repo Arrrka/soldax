@@ -48,14 +48,14 @@ export default function CasesHeader({ tg, profile }) {
               src={tg?.photo_url || logo}
             />
           </Space>
-          <span style={headerText}>{tg?.first_name}</span>
+          <span style={headerText}>{tg?.first_name || 'first'}</span>
         </div>
       </LinkItem>
 
       <div style={header}>
         <TonConnectButton style={{ width: 110 }} />
         <LinkItem value="/soldax/profile">
-          <span style={headerText}>{profile.balance}</span>
+          <span style={headerText}>{profile.balance || '0.00'}</span>
           <Space wrap size={16} style={{ marginLeft: 15 }}>
             <Avatar size="small" shape="circle" gap="5" src={logo} />
           </Space>

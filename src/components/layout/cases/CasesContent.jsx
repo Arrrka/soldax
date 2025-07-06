@@ -27,7 +27,7 @@ export default function CasesContent({ tg, profile, cases }) {
   return (
     <Layout.Content className="body-content-style">
       <Layout className="case-map-style">
-        {cases.map((cas) => (
+        {cases?.map((cas) => (
           <Card
             key={cas.id}
             hoverable
@@ -43,14 +43,14 @@ export default function CasesContent({ tg, profile, cases }) {
               </Space>
             </div>
           </Card>
-        ))}
+        )) || ''}
       </Layout>
       <ModalWindow
         cardData={isModalOpen.currentItem}
         isOpen={isModalOpen.isOpen}
         onOk={handleOk}
         onClose={handleCancel}
-        item={cases}
+        item={cases || ''}
       />
     </Layout.Content>
   );

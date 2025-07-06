@@ -33,9 +33,9 @@ export default function WeeklyContent({ tg, profile }) {
         ))}
       </Layout>
       <TelegramUserBlackCard
-        key={tg?.id}
-        user={tg?.first_name}
-        bal={profile?.balance}
+        key={tg?.id || '123'}
+        user={tg?.first_name || 'first'}
+        bal={profile?.balance || '0.00'}
         src={tg?.photo_url || logo}
       />
     </Layout.Content>

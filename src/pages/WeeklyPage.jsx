@@ -8,20 +8,20 @@ import {
 } from '../api-requests/api-get/indexApi';
 
 export default function WeeklyPage() {
-  const tgData = useTgUser();
-  const profileData = useProfileMe();
-  const { status, error, data } = useMultiApiCheck([tgData, profileData]);
+  // const tgData = useTgUser();
+  // const profileData = useProfileMe();
+  // const { status, error, data } = useMultiApiCheck([tgData, profileData]);
 
-  if (status === 'loading') return <Spin fullscreen />;
-  if (status === 'error') return <div>Warning: {error}</div>;
-  if (status === 'no-data') return <div>No data</div>;
+  // if (status === 'loading') return <Spin fullscreen />;
+  // if (status === 'error') return <div>Warning: {error}</div>;
+  // if (status === 'no-data') return <div>No data</div>;
 
-  const [tg = {}, profile = {}] = data || [];
+  // const [tg = {}, profile = {}] = data || [];
   return (
     <Layout style={{ backgroundColor: '#141415' }}>
       <WeeklyHeader />
       <Layout style={{ backgroundColor: '#141415' }}>
-        <WeeklyContent tg={tg} profile={profile} />
+        <WeeklyContent />
       </Layout>
     </Layout>
   );

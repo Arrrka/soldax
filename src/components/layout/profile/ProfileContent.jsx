@@ -54,7 +54,7 @@ export default function ProfileContent({ tg, profile }) {
             className="flex-center-style text-white-large"
             style={{ textAlign: 'left' }}
           >
-            {tg?.first_name + ' ' + tg?.last_name}
+            {tg?.first_name || 'first' + ' ' + tg?.last_name || 'second'}
           </span>
           <span
             style={{
@@ -62,7 +62,7 @@ export default function ProfileContent({ tg, profile }) {
             }}
             className="flex-space-between-style black-card-style flex-center-style"
           >
-            #{tg?.id}
+            #{tg?.id || '123'}
           </span>
         </div>
 
@@ -73,7 +73,9 @@ export default function ProfileContent({ tg, profile }) {
           <div className="flex-center-style flex-column-content-style">
             <span className="text-grey">Balance</span>
             <div style={{ flexDirection: 'row' }} className="flex-center-style">
-              <span className="text-white-middle">{profile.balance}</span>
+              <span className="text-white-middle">
+                {profile.balance || '0.00'}
+              </span>
               <Space wrap size={16}>
                 <Avatar size="small" shape="circle" gap="5" src={logo} />
               </Space>
@@ -100,7 +102,7 @@ export default function ProfileContent({ tg, profile }) {
           </button>
         </div>
         <Layout className="case-map-style">
-          {profile.inventory.map((inv) => (
+          {profile?.inventory.map((inv) => (
             <Card
               key={inv.id}
               hoverable
@@ -112,14 +114,14 @@ export default function ProfileContent({ tg, profile }) {
               }}
               styles={{ body: { padding: 0 } }}
             ></Card>
-          ))}
+          )) || ''}
         </Layout>
       </Layout>
       <DepModal
         isOpen={isModalOpen.isOpen}
         onOk={handleOk}
         onClose={handleCancel}
-        item={profile}
+        item={profile || ''}
       />
     </Layout.Content>
   );
