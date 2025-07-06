@@ -47,7 +47,7 @@ export default function ProfileContent({ tg, profile }) {
         className="body-content-style"
       >
         <Space wrap size={16} className="big-user-photo-style">
-          <Avatar size={110} shape="circle" src={tg?.photo_url} />
+          <Avatar size={110} shape="circle" src={tg?.photo_url || logo} />
         </Space>
         <div className="flex-space-between-style">
           <span

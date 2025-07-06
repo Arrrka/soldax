@@ -3,6 +3,7 @@ import ListBlackCard from '../../common/ListBlackCard';
 import TelegramUserBlackCard from '../../common/TelegramUserBlackCard';
 import { useEffect, useState } from 'react';
 import { fakeFatchUsers } from '../../../api';
+import logo from '@/assets/images/ton_logo_pack/ton_logo_pack/ton_symbol.svg';
 
 export default function WeeklyContent({ tg, profile }) {
   const [loading, setLoading] = useState(false);
@@ -35,7 +36,7 @@ export default function WeeklyContent({ tg, profile }) {
         key={tg?.id}
         user={tg?.first_name}
         bal={profile?.balance}
-        src={tg?.photo_url}
+        src={tg?.photo_url || logo}
       />
     </Layout.Content>
   );
