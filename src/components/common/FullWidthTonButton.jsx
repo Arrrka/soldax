@@ -1,4 +1,4 @@
-import { useTonWallet } from '../../hooks/useTonWallet';
+import { useTonWallet } from '@/hooks/useTonWallet';
 import logo from '@/assets/images/ton_logo_pack/ton_logo_pack/ton_symbol.svg';
 
 export default function FullWidthTonButton() {

@@ -1,8 +1,9 @@
 import { Layout, Avatar, Space, Card, Spin } from 'antd';
+import { useTonConnectUI } from '@tonconnect/ui-react';
 import { useState } from 'react';
 import DepModal from '../../common/dep-modal/DepModal';
 import logo from '@/assets/images/ton_logo_pack/ton_logo_pack/ton_symbol.svg';
-import SafeTonButtonWrapper from '../../common/SafeTonButtonWrapper';
+import FullWidthTonButton from '../../common/FullWidthTonButton';
 
 export default function ProfileContent({ tg, profile }) {
   const [isModalOpen, setIsModalOpen] = useState({
@@ -76,7 +77,7 @@ export default function ProfileContent({ tg, profile }) {
             </button>
           </div>
         </div>
-        <SafeTonButtonWrapper />
+        <FullWidthTonButton />
         <div className="flex-space-between-style">
           <span>Inventory:</span>
           <button
