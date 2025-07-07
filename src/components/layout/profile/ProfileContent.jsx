@@ -3,17 +3,12 @@ import { useTonConnectUI } from '@tonconnect/ui-react';
 import { useState } from 'react';
 import DepModal from '../../common/dep-modal/DepModal';
 import logo from '@/assets/images/ton_logo_pack/ton_logo_pack/ton_symbol.svg';
-import FullWidthTonButton from '../../common/FullWidthTonButton';
+import SafeTonButtonWrapper from '../../common/SafeTonButtonWrapper';
 
 export default function ProfileContent({ tg, profile }) {
   const [isModalOpen, setIsModalOpen] = useState({
     isOpen: false,
   });
-
-  const [hasMounted, setHasMounted] = useState(false);
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
 
   const showModal = () => {
     setIsModalOpen({
@@ -82,7 +77,7 @@ export default function ProfileContent({ tg, profile }) {
             </button>
           </div>
         </div>
-        {hasMounted && <FullWidthTonButton />}
+        <SafeTonButtonWrapper />
         <div className="flex-space-between-style">
           <span>Inventory:</span>
           <button
