@@ -2,7 +2,7 @@ import { useTonConnectUI } from '@tonconnect/ui-react';
 import { useEffect, useState } from 'react';
 
 export function useTonWallet() {
-  const [tonConnectUI] = useTonConnectUI();
+  const tonConnectUI = useTonConnectUI();
   const [isConnected, setIsConnected] = useState(false);
   const [walletAddress, setWalletAddress] = useState(null);
   const [wallet, setWallet] = useState(null);
