@@ -11,6 +11,14 @@ export default function ProfileContent({ tg, profile }) {
     isOpen: false,
   });
 
+  const { pathname } = useLocation();
+
+  const LinkItem = ({ value, children }) => (
+    <RouterLink to={value} style={{ color: '#fff' }}>
+      {children}
+    </RouterLink>
+  );
+
   const showModal = () => {
     setIsModalOpen({
       isOpen: true,
