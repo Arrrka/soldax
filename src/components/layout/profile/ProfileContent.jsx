@@ -10,6 +10,11 @@ export default function ProfileContent({ tg, profile }) {
     isOpen: false,
   });
 
+  const [hasMounted, setHasMounted] = useState(false);
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
   const showModal = () => {
     setIsModalOpen({
       isOpen: true,
@@ -77,7 +82,7 @@ export default function ProfileContent({ tg, profile }) {
             </button>
           </div>
         </div>
-        <FullWidthTonButton />
+        {hasMounted && <FullWidthTonButton />}
         <div className="flex-space-between-style">
           <span>Inventory:</span>
           <button
