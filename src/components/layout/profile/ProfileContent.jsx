@@ -1,7 +1,5 @@
 import { Layout, Avatar, Space, Card, Spin } from 'antd';
-import { useTonConnectUI } from '@tonconnect/ui-react';
 import { useState } from 'react';
-import { Link as RouterLink, useLocation } from 'react-router-dom';
 import DepModal from '../../common/dep-modal/DepModal';
 import logo from '@/assets/images/ton_logo_pack/ton_logo_pack/ton_symbol.svg';
 import SafeTonButtonWrapper from '../../common/SafeTonButtonWrapper';
@@ -10,14 +8,6 @@ export default function ProfileContent({ tg, profile }) {
   const [isModalOpen, setIsModalOpen] = useState({
     isOpen: false,
   });
-
-  const { pathname } = useLocation();
-
-  const LinkItem = ({ value, children }) => (
-    <RouterLink to={value} style={{ color: '#fff' }}>
-      {children}
-    </RouterLink>
-  );
 
   const showModal = () => {
     setIsModalOpen({
@@ -41,11 +31,9 @@ export default function ProfileContent({ tg, profile }) {
         }}
         className="body-content-style"
       >
-        <LinkItem value="/soldax/">
-          <Space wrap size={16} className="big-user-photo-style">
-            <Avatar size={110} shape="circle" src={tg?.photo_url || logo} />
-          </Space>
-        </LinkItem>
+        <Space wrap size={16} className="big-user-photo-style">
+          <Avatar size={110} shape="circle" src={tg?.photo_url || logo} />
+        </Space>
         <div className="flex-space-between-style">
           <span
             className="flex-center-style text-white-large"
