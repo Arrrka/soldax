@@ -73,7 +73,7 @@ export default function CasesContent({ tg, profile, cases }) {
           />
         </button>
 
-        {/* <BlockForModalSmall
+        <BlockForModalSmall
           title="Give a ways"
           className="blue-card-style-modal"
         />
@@ -95,7 +95,7 @@ export default function CasesContent({ tg, profile, cases }) {
         <BlockForMainLarge
           title="Coming soon"
           className="blue-card-style-modal"
-        /> */}
+        />
       </Layout>
     </Layout.Content>
   );
