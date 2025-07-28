@@ -1,9 +1,9 @@
 {
-  "name": "mini-app",
+  "name": "soldax",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://arrrka.github.io/ton-mini-app",
+  "homepage": "https://arrrka.github.io/soldax",
   "scripts": {
     "dev": "vite",
     "dev-https": "vite --open",
