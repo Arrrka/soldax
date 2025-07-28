@@ -4,6 +4,7 @@ import { useState } from 'react';
 import DepModal from '../../common/dep-modal/DepModal';
 import logo from '@/assets/images/ton_logo_pack/ton_logo_pack/ton_symbol.svg';
 import FullWidthTonButton from '../../common/FullWidthTonButton';
+import PromoButton from '../../common/PromoButton';
 
 export default function ProfileContent({ tg, profile }) {
   const [isModalOpen, setIsModalOpen] = useState({
@@ -78,6 +79,7 @@ export default function ProfileContent({ tg, profile }) {
           </div>
         </div>
         <FullWidthTonButton />
+        <PromoButton />
         <div className="flex-space-between-style">
           <span>Inventory:</span>
           <button
